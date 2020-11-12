@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ChessboardView: View {
+struct BoardView: View {
     
-    @ObservedObject private var gameState = CurrentGameState()
+    @ObservedObject private var game = CurrentGameState()
     
     public init() {
-        self.gameState.startGame()
+        self.game.startGame()
     }
 
     public var body: some View {
@@ -20,7 +20,7 @@ struct ChessboardView: View {
             ForEach((0 ..< 8).reversed(), id: \.self) { rank in
                 HStack(spacing: 0.0) {
                     ForEach((0 ..< 8), id: \.self) { file in
-                        ChessSquareView(square: self.gameState.chessboard.position[rank][file])
+                        SquareView(square: self.game.board.position[rank][file])
                     }
                 }.frame(width: 60 * 8, height: 60)
             }
@@ -28,10 +28,10 @@ struct ChessboardView: View {
     }
 }
 
-struct Chessboard_Previews: PreviewProvider {
+struct Board_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ChessboardView()
+            BoardView()
         }
     }
 }

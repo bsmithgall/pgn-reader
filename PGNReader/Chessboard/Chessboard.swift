@@ -11,7 +11,7 @@ fileprivate let WHITE_PIECE_ORDER: [ChessPiece] = [ChessPiece.wr, ChessPiece.wn,
 fileprivate let BLACK_PIECE_ORDER: [ChessPiece] = [ChessPiece.br, ChessPiece.bn, ChessPiece.bb, ChessPiece.bq, ChessPiece.bk, ChessPiece.bb, ChessPiece.bn, ChessPiece.br]
 
 public struct Chessboard: Hashable {
-    public var gameSquares: [[ChessSquare]] = []
+    public var squares: [[ChessSquare]] = []
     
     public init() {
         for rank in 0 ..< 8 {
@@ -19,7 +19,7 @@ public struct Chessboard: Hashable {
             for file in 0 ..< 8 {
                 rankSquares.append(ChessSquare(rank: rank, file: file))
             }
-            self.gameSquares.append(rankSquares)
+            self.squares.append(rankSquares)
         }
     }
 
@@ -43,10 +43,10 @@ public struct Chessboard: Hashable {
      
     
     public mutating func setSquare(rank: Int, file: Int) {
-        self.gameSquares[rank][file] = ChessSquare(rank: rank, file: file)
+        self.squares[rank][file] = ChessSquare(rank: rank, file: file)
     }
 
     public mutating func setSquare(rank: Int, file: Int, piece: ChessPiece) {
-        self.gameSquares[rank][file] = ChessSquare(rank: rank, file: file, piece: piece)
+        self.squares[rank][file] = ChessSquare(rank: rank, file: file, piece: piece)
     }
 }

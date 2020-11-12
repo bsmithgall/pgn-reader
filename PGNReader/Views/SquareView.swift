@@ -15,7 +15,7 @@ fileprivate let colorMap: [SquareColor: Color] = [
     SquareColor.WHITE: WHITE
 ]
 
-public struct ChessSquareView: View {
+public struct SquareView: View {
     private let square: Square
     private let squareSize: CGFloat
     private let squareColor: Color
@@ -47,14 +47,14 @@ public struct ChessSquareView: View {
 struct ChessSquareView_Previews: PreviewProvider {
     static var previews: some View {
         HStack(spacing: 0) {
-            ChessSquareView(square: Square(rank: 0, file: 0, piece: Piece.wr))
-            ChessSquareView(square: Square(rank: 0, file: 1, piece: Piece.wn))
-            ChessSquareView(square: Square(rank: 0, file: 2, piece: Piece.wb))
-            ChessSquareView(square: Square(rank: 0, file: 3, piece: Piece.wq))
-            ChessSquareView(square: Square(rank: 0, file: 4, piece: Piece.wk))
-            ChessSquareView(square: Square(rank: 0, file: 5, piece: Piece.wb))
-            ChessSquareView(square: Square(rank: 0, file: 6, piece: Piece.wn))
-            ChessSquareView(square: Square(rank: 0, file: 7, piece: Piece.wr))
+            SquareView(square: Square(rank: 0, file: 0, piece: Piece.wr))
+            SquareView(square: Square(rank: 0, file: 1, piece: Piece.wn))
+            SquareView(square: Square(rank: 0, file: 2, piece: Piece.wb))
+            SquareView(square: Square(rank: 0, file: 3, piece: Piece.wq))
+            SquareView(square: Square(rank: 0, file: 4, piece: Piece.wk))
+            SquareView(square: Square(rank: 0, file: 5, piece: Piece.wb))
+            SquareView(square: Square(rank: 0, file: 6, piece: Piece.wn))
+            SquareView(square: Square(rank: 0, file: 7, piece: Piece.wr))
         }
     }
 }
