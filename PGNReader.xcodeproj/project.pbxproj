@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5834514255A4826004C8A3A /* ChessboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5834513255A4826004C8A3A /* ChessboardView.swift */; };
+		B5834520255A48A3004C8A3A /* Chessboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583451F255A48A3004C8A3A /* Chessboard.swift */; };
 		B585B7DE2559F5A1007DAE63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B7DD2559F5A1007DAE63 /* AppDelegate.swift */; };
 		B585B7E02559F5A1007DAE63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B7DF2559F5A1007DAE63 /* ContentView.swift */; };
 		B585B7E22559F5A2007DAE63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B585B7E12559F5A2007DAE63 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 		B585B7E82559F5A2007DAE63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B585B7E62559F5A2007DAE63 /* Main.storyboard */; };
 		B585B7F42559F5A3007DAE63 /* PGNReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B7F32559F5A3007DAE63 /* PGNReaderTests.swift */; };
 		B585B7FF2559F5A3007DAE63 /* PGNReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B7FE2559F5A3007DAE63 /* PGNReaderUITests.swift */; };
+		B585B825255A002A007DAE63 /* ChessSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B824255A002A007DAE63 /* ChessSquare.swift */; };
+		B585B83A255A4167007DAE63 /* ChessSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585B839255A4167007DAE63 /* ChessSquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5834513255A4826004C8A3A /* ChessboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessboardView.swift; sourceTree = "<group>"; };
+		B583451F255A48A3004C8A3A /* Chessboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chessboard.swift; sourceTree = "<group>"; };
 		B585B7DA2559F5A1007DAE63 /* PGNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B585B7DD2559F5A1007DAE63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B585B7DF2559F5A1007DAE63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		B585B7FA2559F5A3007DAE63 /* PGNReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGNReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B585B7FE2559F5A3007DAE63 /* PGNReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGNReaderUITests.swift; sourceTree = "<group>"; };
 		B585B8002559F5A3007DAE63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B585B824255A002A007DAE63 /* ChessSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessSquare.swift; sourceTree = "<group>"; };
+		B585B839255A4167007DAE63 /* ChessSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessSquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B51C6CDC255A4754006B3479 /* Chessboard */ = {
+			isa = PBXGroup;
+			children = (
+				B5834513255A4826004C8A3A /* ChessboardView.swift */,
+				B583451F255A48A3004C8A3A /* Chessboard.swift */,
+			);
+			path = Chessboard;
+			sourceTree = "<group>";
+		};
 		B585B7D12559F5A1007DAE63 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +115,9 @@
 		B585B7DC2559F5A1007DAE63 /* PGNReader */ = {
 			isa = PBXGroup;
 			children = (
+				B51C6CDC255A4754006B3479 /* Chessboard */,
+				B585B83E255A416F007DAE63 /* ChessSquare */,
+				B585B8202559FCB7007DAE63 /* Models */,
 				B585B7DD2559F5A1007DAE63 /* AppDelegate.swift */,
 				B585B7DF2559F5A1007DAE63 /* ContentView.swift */,
 				B585B7E12559F5A2007DAE63 /* Assets.xcassets */,
@@ -133,6 +153,22 @@
 				B585B8002559F5A3007DAE63 /* Info.plist */,
 			);
 			path = PGNReaderUITests;
+			sourceTree = "<group>";
+		};
+		B585B8202559FCB7007DAE63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B585B83E255A416F007DAE63 /* ChessSquare */ = {
+			isa = PBXGroup;
+			children = (
+				B585B824255A002A007DAE63 /* ChessSquare.swift */,
+				B585B839255A4167007DAE63 /* ChessSquareView.swift */,
+			);
+			path = ChessSquare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B585B83A255A4167007DAE63 /* ChessSquareView.swift in Sources */,
+				B5834520255A48A3004C8A3A /* Chessboard.swift in Sources */,
+				B585B825255A002A007DAE63 /* ChessSquare.swift in Sources */,
 				B585B7E02559F5A1007DAE63 /* ContentView.swift in Sources */,
+				B5834514255A4826004C8A3A /* ChessboardView.swift in Sources */,
 				B585B7DE2559F5A1007DAE63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
